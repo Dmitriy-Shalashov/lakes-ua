@@ -1,0 +1,61 @@
+@use '@/styles/basicStyles/' as *;
+
+.inputBox {
+   width: 100%;
+   position: relative;
+   height: 50px;
+}
+.input {
+      width: 100%;
+      padding: 14px;
+      @include border($radius-S, $border-M, $primary-color );
+      background: transparent;
+      outline: none;
+      color: $primary-color;
+      font-size: 20px;
+}
+.label {
+      position: absolute;
+      left: 0;
+      padding: 15px;
+      pointer-events: none;
+      font-size: 14px;
+      font-weight: 200;
+      text-transform: uppercase;
+      color: $transparent-primary-color;
+      transition: .3s;
+}
+.showIcon{
+      position: absolute;
+      right: 10px;
+      bottom: 2px;
+      width: 35px;
+      height: 35px;
+}
+.showIcon:hover{
+      @include border(50%, $border-M, $primary-color );
+}
+.input:valid ~ span,
+.input:focus ~ span,
+.input:not([value='']){
+      color: $primary-semidark-color;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 0 10px;
+      background: $primary-color;
+      border-radius: 5px;
+      letter-spacing: 0.3em;
+      transform: translateX(14px) translateY(-14px);
+      @include border($radius-XS, $border-M, $primary-semidark-color );
+}
+.error {
+      color: $error-message-color ;
+      margin-top: 5px;
+}
+.errorWrapper{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+}
+
+

@@ -1,0 +1,28 @@
+@use '@/styles/basicStyles/' as *;
+
+.formWrapper {
+   width: 70%;
+   height: 100%;
+   @include flex(center, space-between);
+   gap: 55px;
+   flex-direction: column;
+}
+.formHeader{
+   height: 25%;
+   @include flex(_,center);
+   flex-direction: column;
+}
+.headerText{
+   margin-top: 20px;
+}
+.formBody{
+   width: 100%;
+   @include flex(_, space-between);
+   flex-direction: column;
+   gap: 50px;
+   flex: 1 1 auto;
+}
+.formFooter{
+   @include flex(center,_);
+   flex-basis: 15%;
+}
