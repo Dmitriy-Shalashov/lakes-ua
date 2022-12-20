@@ -1,0 +1,82 @@
+@use '@/styles/basicStyles/' as *;
+
+.background {
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   background-color:  $primary-light-color ;
+   background-image: url('../../../public/images/default-bg.jpeg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed; 
+}
+
+.blur{
+   position: absolute;
+   left: 0;
+   top: 0;
+   backdrop-filter: blur(8px);
+   height: 100vh;
+	width: 100%;
+   z-index: 0;
+}
+
+.wrapper{
+   @include flex(center,_);
+   width: 100%;
+   height: 100vh;
+   flex-direction: column;
+  
+}
+.headBlock{
+   width: 100%;
+}
+.contetBlock{
+   flex: auto;
+   @include flex(center, center);
+}
+
+.content{
+   width: 1300px;
+   min-height: 700px;
+   background: $primary-semidark-color;
+   border-radius: $radius-XXL;
+   color: $primary-color;
+   z-index: 1;
+   display: flex;
+  
+   @include shadow($transparent-primary-dark-color);
+
+   @include tablet{
+     max-width: 800px;
+   }
+   @include mobile{
+      background: none;
+   }
+}
+
+.content>* {
+   flex: 1 ;
+}
+
+.image {
+   position: relative;
+   @include mobile{
+            display: none;
+         }
+   @include tablet{
+            flex: 0.5;
+         }
+}
+
+.image > * {
+   border-radius: $radius-XXL 0 0 $radius-XXL;
+   border-right: 5px solid $primary-color;
+}
+
+.info {
+   padding: 50px 25px;
+   @include flex(center, center);
+}
+
+

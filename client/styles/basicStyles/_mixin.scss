@@ -1,0 +1,14 @@
+@mixin flex($align-items, $justify-content) {
+   display: flex;
+   align-items: $align-items;
+   justify-content: $justify-content;
+ }
+
+@mixin shadow($color) {
+  box-shadow: ($color) 0px 2px 8px;
+ }
+
+@mixin border($radius, $size, $color, $type:solid) {
+  border: $size $type $color;
+  border-radius: $radius;
+ }

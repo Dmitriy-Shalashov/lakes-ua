@@ -1,0 +1,27 @@
+$container: 1660px;
+$mobile-width: 600px;
+$tablet-width: 1024px;
+
+
+ .container {
+  max-width: $container;
+  height: 100vh;
+  margin: auto;
+  text-align: center;
+  padding: 0 2rem;
+  // border: 1px solid gray;
+  filter: blur(0)
+}
+
+
+@mixin mobile {
+   @media only screen and (max-width: $mobile-width) {
+     @content;
+   }
+ }
+ 
+ @mixin tablet {
+   @media only screen and (max-width: $tablet-width) {
+     @content;
+   }
+ }

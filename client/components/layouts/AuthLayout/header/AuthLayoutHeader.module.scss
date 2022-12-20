@@ -1,0 +1,41 @@
+@use '@/styles/basicStyles/' as *;
+
+.header {
+   width: 100%;
+   position: relative;
+   z-index: 99;
+   top: 0;
+   left: 0;
+   margin-bottom: 10px;
+}
+.wrapper {
+   width: auto;
+   height: 80px;
+   color: $primary-color;
+   @include flex(center, space-between);
+ 
+}
+.navigate {
+   width: 320px;
+   gap: 10px;
+   @include flex(center, flex-end);
+   
+}
+.language {
+   width: 40px;
+   height: 40px;
+   @include flex(center, center);
+}
+.language:hover {
+   border: 2px solid $primary-color;
+   border-radius: 50%;
+}
+.icon {
+   position: relative;
+   top: 3px;
+}
+.btn {
+   flex-grow: 1;
+   height: auto;
+}
+

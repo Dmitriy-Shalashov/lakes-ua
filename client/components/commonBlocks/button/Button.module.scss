@@ -1,0 +1,45 @@
+@use '@/styles/basicStyles/' as *;
+
+.button {
+   cursor: pointer;
+   width: 100%;
+   height: 40px;
+   font-weight: 600;
+   @include flex(center, center);
+}
+
+// PRIMARY color
+.btn--primary--outline {
+   color: $primary-color;
+   background: transparent;
+   @include border($radius-S, $border-M, $primary-color );
+}
+
+.btn--primary--outline:hover {
+   color: $primary-semidark-color;
+   background: $primary-color;
+}
+
+.btn--primary--outline:active {
+   color: $primary-dark-color;
+   background: $transparent-primary-color;
+}
+// DISABLED color
+.button:disabled {
+   color: $primary-light-color;
+   @include border($radius-S, $border-M, $primary-light-color );
+   cursor: not-allowed;
+}
+.button:disabled:hover{
+   background: none;
+}
+
+// L size
+.btn--L {
+   font-size: 14px;
+   height: 40px;
+}
+.btn--XL {
+   font-size: 18px;
+   height: 55px;
+}
